@@ -5,7 +5,14 @@
 
 - https://seenaburns.com/benchmarking-rust-with-cargo-bench/
 
-# hyperfind
+# What I learned by solving 50 Advent of Code challenges in Rust - Luciano Mammino | Rust Nation UK 
+- https://youtu.be/udHjmno-tfA?si=x2hVXk9pZK8XQKIu
+
+# benchmark(이게 젤 쉽다. ㅋ)
+- https://github.com/sharkdp/hyperfine
+
+
+# hyperfind(성능 비교)
 
 - final Result
 

@@ -14,7 +14,25 @@
 
 # hyperfind(성능 비교)
 
-- final Result
+- final Result(trait optimization이 승리 )
+
+```bash
+
+$ hyperfine --warmup 3 'b01_day1_rust_code_final/target/release/b01_day1_rust_code_final' 'a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization'
+Benchmark 1: b01_day1_rust_code_final/target/release/b01_day1_rust_code_final
+  Time (mean ± σ):     653.4 µs ± 173.4 µs    [User: 326.8 µs, System: 236.3 µs]
+  Range (min … max):   422.0 µs … 1754.1 µs    888 runs
+
+Benchmark 2: a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization
+  Time (mean ± σ):     637.2 µs ± 167.0 µs    [User: 323.8 µs, System: 227.3 µs]
+  Range (min … max):   396.0 µs … 1724.6 µs    976 runs
+
+
+Summary
+  a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization ran
+    1.03 ± 0.38 times faster than b01_day1_rust_code_final/target/release/b01_day1_rust_code_final
+  
+```
 
 ```bash
 $ hyperfine --warmup 3 'a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization' 'a01_day_add_iterator/target/release/a01_day_add_iterator'

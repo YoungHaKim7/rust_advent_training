@@ -6,13 +6,13 @@ struct Elves {
 
 impl Elves {
     pub fn get_fat(&self) -> &u32 {
-        return self.calories.get(0).unwrap();
+        &self.calories[0]
     }
+
     pub fn get_fat_sum(&self, top: usize) -> u32 {
         let mut sum = 0;
         for i in 0..top {
-            let calories = self.calories.get(i).unwrap();
-            sum += calories;
+            sum += self.calories[i];
         }
         sum
     }
@@ -37,13 +37,10 @@ impl FromStr for Elves {
 }
 
 fn main() {
-    let file = include_str!("../../data.txt").;
-    Elves::from_str(file);
-    let elves = Elves {
-        calories: vec![file.parse()],
-    };
+    let file = include_str!("../../data.txt");
+    let elves = Elves::from_str(file).expect("Failed to parse file");
     let calories = elves.get_fat();
-    println!("Elf carry most calories: {} ", calories);
+    println!("Elf carrying the most calories: {}", calories);
     let sum = elves.get_fat_sum(3);
-    println!("Sum of top 3 elves: {}", sum);
+    println!("Sum of top 3 elves' calories: {}", sum);
 }

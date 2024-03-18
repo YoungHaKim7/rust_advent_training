@@ -39,8 +39,10 @@ impl FromStr for Elves {
 fn main() {
     let file = include_str!("../../data.txt");
     let elves = Elves::from_str(file).expect("Failed to parse file");
-    let calories = elves.get_fat();
-    println!("Elf carrying the most calories: {}", calories);
+    // let calories = elves.get_fat();
+    // println!("Elf carrying the most calories: {}", calories);
+    // dbg!(calories);
     let sum = elves.get_fat_sum(3);
-    println!("Sum of top 3 elves' calories: {}", sum);
+    // println!("Sum of top 3 elves' calories: {}", sum);
+    dbg!(sum);
 }

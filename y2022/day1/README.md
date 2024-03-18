@@ -14,23 +14,28 @@
 
 # hyperfind(성능 비교)
 
-- final Result(trait optimization이 승리 )
+- final Result(Rust스타일 코드가 미세하게 승리 )
 
 ```bash
 
 $ hyperfine --warmup 3 'b01_day1_rust_code_final/target/release/b01_day1_rust_code_final' 'a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization'
 Benchmark 1: b01_day1_rust_code_final/target/release/b01_day1_rust_code_final
-  Time (mean ± σ):     653.4 µs ± 173.4 µs    [User: 326.8 µs, System: 236.3 µs]
-  Range (min … max):   422.0 µs … 1754.1 µs    888 runs
+  Time (mean ± σ):     643.0 µs ± 158.3 µs    [User: 323.3 µs, System: 225.2 µs]
+  Range (min … max):   330.2 µs … 1418.8 µs    981 runs
+
+  Warning: Command took less than 5 ms to complete. Note that the results might be inaccurate because hyperfine can not calibrate the shell startup time much more precise than this limit. You can try to use the `-N`/`--shell=none` option to disable the shell completely.
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
 
 Benchmark 2: a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization
-  Time (mean ± σ):     637.2 µs ± 167.0 µs    [User: 323.8 µs, System: 227.3 µs]
-  Range (min … max):   396.0 µs … 1724.6 µs    976 runs
+  Time (mean ± σ):     644.3 µs ± 157.8 µs    [User: 321.8 µs, System: 222.7 µs]
+  Range (min … max):   389.0 µs … 1501.6 µs    954 runs
 
+  Warning: Command took less than 5 ms to complete. Note that the results might be inaccurate because hyperfine can not calibrate the shell startup time much more precise than this limit. You can try to use the `-N`/`--shell=none` option to disable the shell completely.
+  Warning: Statistical outliers were detected. Consider re-running this benchmark on a quiet system without any interferences from other programs. It might help to use the '--warmup' or '--prepare' options.
 
 Summary
-  a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization ran
-    1.03 ± 0.38 times faster than b01_day1_rust_code_final/target/release/b01_day1_rust_code_final
+  b01_day1_rust_code_final/target/release/b01_day1_rust_code_final ran
+    1.00 ± 0.35 times faster than a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization
   
 ```
 

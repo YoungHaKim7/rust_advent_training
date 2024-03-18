@@ -22,6 +22,9 @@ Benchmark 2: a01_day_add_iterator/target/release/a01_day_add_iterator
   Time (mean ± σ):     641.3 µs ± 141.3 µs    [User: 319.6 µs, System: 224.7 µs]
   Range (min … max):   426.5 µs … 1393.5 µs    902 runs
 
+Summary
+  a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization ran
+    1.00 ± 0.33 times faster than a01_day_add_iterator/target/release/a01_day_add_iterator
 ```
 
 ```bash

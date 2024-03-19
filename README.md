@@ -10,3 +10,5 @@ https://github.com/lmammino/rust-advent
 # 예전거
 - 이게 더 러스트 코드 같다
   - https://github.com/YoungHaKim7/advent-of-learning
+  - https://github.com/YoungHaKim7/advent-of-code2018
+    - 원본 https://github.com/BurntSushi/advent-of-code

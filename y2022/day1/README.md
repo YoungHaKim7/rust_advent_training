@@ -16,6 +16,28 @@
 
 - final Result(Rust스타일 코드가 미세하게 승리 )
 
+- 역시 끝판왕은  unstable이 속도 승리 ㅋ
+
+```bash
+hyperfine --warmup 3 'b01_day1_rust_code_final/target/release/b01_day1_rust_code_final' 'b02_day1_rust_code_final_unstable/target/release/b02_day1_r
+ust_code_final_unstable'
+Benchmark 1: b01_day1_rust_code_final/target/release/b01_day1_rust_code_final
+  Time (mean ± σ):       4.0 ms ±   1.5 ms    [User: 0.5 ms, System: 5.9 ms]
+  Range (min … max):     2.2 ms …   8.5 ms    259 runs
+
+
+Benchmark 2: b02_day1_rust_code_final_unstable/target/release/b02_day1_rust_code_final_unstable
+  Time (mean ± σ):       4.1 ms ±   1.7 ms    [User: 0.6 ms, System: 5.6 ms]
+  Range (min … max):     2.3 ms …   9.9 ms    276 runs
+
+
+Summary
+  'b01_day1_rust_code_final/target/release/b01_day1_rust_code_final' ran
+    1.04 ± 0.58 times faster than 'b02_day1_rust_code_final_unstable/target/release/b02_day1_rust_code_final_unstable'
+
+```
+
+
 ```bash
 
 $ hyperfine --warmup 3 'b01_day1_rust_code_final/target/release/b01_day1_rust_code_final' 'a01_day1_final_trait_optimization/target/release/a01_day1_final_trait_optimization'
